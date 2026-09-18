@@ -703,6 +703,40 @@ body {
 		transform: translate(-50%, -42%) scale(0.82);
 	}
 
+	.alien-visitor {
+		top: 110px;
+		width: 64px;
+	}
+
+	.speech-bubble {
+		top: -170px;
+		left: 50%;
+		width: min(92vw, 300px);
+		padding: 12px 13px;
+		transform: translateX(-50%);
+		font-size: 0.86rem;
+	}
+
+	.speech-bubble::before {
+		top: auto;
+		right: auto;
+		bottom: -12px;
+		left: 50%;
+		width: 18px;
+		height: 18px;
+		transform: translateX(-50%) rotate(-45deg);
+	}
+
+	.speech-bubble form {
+		gap: 5px;
+	}
+
+	.speech-bubble button {
+		padding-right: 6px;
+		padding-left: 6px;
+		font-size: 0.78rem;
+	}
+
 	.side-panel--left {
 		border-right-width: 1px;
 	}

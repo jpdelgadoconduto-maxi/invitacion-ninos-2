@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="es">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Invitación espacial</title>
+	<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+	<main class="space-scene" aria-label="Escena espacial">
+		<aside class="side-panel side-panel--left" aria-hidden="true">
+			<span class="star star--one"></span>
+			<span class="star star--two"></span>
+			<span class="star star--three"></span>
+			<span class="star star--four"></span>
+			<span class="star star--five"></span>
+			<span class="star star--six"></span>
+			<span class="star star--seven"></span>
+			<span class="star star--eight"></span>
+			<span class="star star--nine"></span>
+			<span class="star star--ten"></span>
+			<span class="star star--eleven"></span>
+			<span class="star star--twelve"></span>
+			<span class="star star--thirteen"></span>
+			<span class="star star--fourteen"></span>
+			<span class="star star--fifteen"></span>
+			<span class="star star--sixteen"></span>
+			<span class="star star--seventeen"></span>
+			<span class="star star--eighteen"></span>
+			<span class="star star--nineteen"></span>
+			<span class="star star--twenty"></span>
+			<span class="alien alien--top"></span>
+			<span class="alien alien--middle"></span>
+			<span class="alien alien--bottom"></span>
+			<span class="alien alien--four"></span>
+			<span class="alien alien--five"></span>
+			<span class="alien alien--six"></span>
+			<span class="alien alien--seven"></span>
+			<span class="alien alien--eight"></span>
+			<span class="alien alien--nine"></span>
+			<span class="alien alien--ten"></span>
+			<span class="alien alien--eleven"></span>
+		</aside>
+
+		<section class="center-space" aria-label="Espacio central">
+			<h1 aria-label="¡Hola, niño terrícola!">
+				<span>¡</span><span>H</span><span>o</span><span>l</span><span>a</span><span>,</span><span class="arc-space">&nbsp;</span><span>n</span><span>i</span><span>ñ</span><span>o</span><span class="arc-space">&nbsp;</span><span>t</span><span>e</span><span>r</span><span>r</span><span>í</span><span>c</span><span>o</span><span>l</span><span>a</span><span>!</span>
+			</h1>
+			<div class="landing-stage">
+				<div class="space-objects" aria-hidden="true">
+					<span class="planet planet--coral"></span>
+					<span class="planet planet--blue"></span>
+					<span class="planet planet--gold"></span>
+					<span class="planet planet--violet"></span>
+					<span class="comet comet--one"></span>
+					<span class="comet comet--two"></span>
+					<span class="comet comet--three"></span>
+				</div>
+				<div class="alien-visitor">
+					<div class="speech-bubble">
+						<p id="welcome-message">Hola, ingresa tu nombre, terrícola.</p>
+						<form id="name-form">
+							<label class="sr-only" for="name-input">Tu nombre</label>
+							<input id="name-input" name="name" type="text" placeholder="Tu nombre" autocomplete="name" required>
+							<button class="party-button" type="submit">¡Vámonos al cumple!</button>
+						</form>
+					</div>
+					<div class="visitor-head">
+						<span></span><span></span>
+					</div>
+					<div class="visitor-body"></div>
+				</div>
+				<div class="spacecraft" aria-label="Nave espacial aterrizando">
+					<div class="ship-dome"></div>
+					<div class="ship-body"><span></span><span></span><span></span></div>
+					<div class="ship-leg ship-leg--left"></div>
+					<div class="ship-leg ship-leg--right"></div>
+					<div class="ship-flame"></div>
+				</div>
+				<div class="landing-shadow"></div>
+			</div>
+		</section>
+
+		<aside class="side-panel side-panel--right" aria-hidden="true">
+			<span class="star star--one"></span>
+			<span class="star star--two"></span>
+			<span class="star star--three"></span>
+			<span class="star star--four"></span>
+			<span class="star star--five"></span>
+			<span class="star star--six"></span>
+			<span class="star star--seven"></span>
+			<span class="star star--eight"></span>
+			<span class="star star--nine"></span>
+			<span class="star star--ten"></span>
+			<span class="star star--eleven"></span>
+			<span class="star star--twelve"></span>
+			<span class="star star--thirteen"></span>
+			<span class="star star--fourteen"></span>
+			<span class="star star--fifteen"></span>
+			<span class="star star--sixteen"></span>
+			<span class="star star--seventeen"></span>
+			<span class="star star--eighteen"></span>
+			<span class="star star--nineteen"></span>
+			<span class="star star--twenty"></span>
+			<span class="alien alien--top"></span>
+			<span class="alien alien--middle"></span>
+			<span class="alien alien--bottom"></span>
+			<span class="alien alien--four"></span>
+			<span class="alien alien--five"></span>
+			<span class="alien alien--six"></span>
+			<span class="alien alien--seven"></span>
+			<span class="alien alien--eight"></span>
+			<span class="alien alien--nine"></span>
+			<span class="alien alien--ten"></span>
+			<span class="alien alien--eleven"></span>
+		</aside>
+	</main>
+	<script>
+		const nameForm = document.querySelector("#name-form");
+		const nameInput = document.querySelector("#name-input");
+		const welcomeMessage = document.querySelector("#welcome-message");
+
+		nameForm.addEventListener("submit", (event) => {
+			event.preventDefault();
+			const name = nameInput.value.trim();
+
+			if (name) {
+				window.location.href = `cumple.html?nombre=${encodeURIComponent(name)}`;
+			}
+		});
+	</script>
+</body>
+</html>

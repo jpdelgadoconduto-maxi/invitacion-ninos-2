@@ -152,6 +152,15 @@
 		launchShip.addEventListener("animationend", () => {
 			launchScene.classList.add("cake-reveal");
 		});
+
+		document.addEventListener("pointerdown", (event) => {
+			const sparkle = document.createElement("span");
+			sparkle.className = "click-sparkle";
+			sparkle.style.left = `${event.clientX}px`;
+			sparkle.style.top = `${event.clientY}px`;
+			document.body.appendChild(sparkle);
+			sparkle.addEventListener("animationend", () => sparkle.remove());
+		});
 	</script>
 </body>
 </html>

@@ -1125,6 +1125,136 @@ body {
 	text-shadow: 0 4px 0 #4b357e;
 }
 
+.final-alien {
+	position: absolute;
+	bottom: 4%;
+	z-index: 7;
+	width: 72px;
+	height: 112px;
+	animation: final-alien-hop 2.8s ease-in-out infinite alternate;
+}
+
+.final-alien--robot {
+	left: 18%;
+	animation-delay: -0.8s;
+}
+
+.final-alien--baby {
+	left: 50%;
+	transform: translateX(-50%) scale(0.72);
+	animation-delay: -1.7s;
+}
+
+.final-alien--cyclops {
+	right: 18%;
+	transform: scale(0.88);
+	animation-delay: -2.3s;
+}
+
+.final-alien-head {
+	position: absolute;
+	top: 0;
+	left: 8px;
+	width: 56px;
+	height: 51px;
+	border: 3px solid #6948a4;
+	border-radius: 55% 55% 44% 44%;
+	background: var(--alien);
+	box-shadow: inset -6px -6px 0 var(--alien-shadow), 0 0 14px rgba(114, 229, 176, 0.38);
+}
+
+.final-alien-head::before,
+.final-alien-head::after {
+	content: "";
+	position: absolute;
+	top: -15px;
+	width: 3px;
+	height: 17px;
+	border-radius: 3px;
+	background: inherit;
+}
+
+.final-alien-head::before { left: 13px; transform: rotate(-20deg); }
+.final-alien-head::after { right: 13px; transform: rotate(20deg); }
+
+.final-alien-head span {
+	position: absolute;
+	top: 18px;
+	width: 10px;
+	height: 14px;
+	border-radius: 50%;
+	background: #10243a;
+}
+
+.final-alien-head span:first-child { left: 13px; }
+.final-alien-head span:last-child { right: 13px; }
+
+.final-alien-body {
+	position: absolute;
+	top: 45px;
+	left: 19px;
+	width: 34px;
+	height: 64px;
+	border-radius: 48% 48% 20% 20%;
+	background: var(--alien);
+	box-shadow: inset -5px -5px 0 var(--alien-shadow);
+}
+
+.final-alien--robot .final-alien-head {
+	border-radius: 12px;
+	background: #70c8dc;
+	box-shadow: inset -6px -6px 0 #3e8eb4, 0 0 14px rgba(112, 200, 220, 0.4);
+}
+
+.final-alien--robot .final-alien-body {
+	border-radius: 12px 12px 20px 20px;
+	background: #70c8dc;
+	box-shadow: inset -5px -5px 0 #3e8eb4;
+}
+
+.final-alien--robot .final-alien-head::before,
+.final-alien--robot .final-alien-head::after {
+	background: #f3a24d;
+}
+
+.final-alien--baby .final-alien-head,
+.final-alien--baby .final-alien-body {
+	background: #f29ac1;
+	box-shadow: inset -5px -5px 0 #c95d91, 0 0 14px rgba(242, 154, 193, 0.35);
+}
+
+.final-alien--baby .final-alien-head {
+	width: 62px;
+	height: 57px;
+	left: 5px;
+}
+
+.final-alien--baby .final-alien-body {
+	left: 16px;
+	width: 40px;
+	height: 57px;
+}
+
+.final-alien--cyclops .final-alien-head {
+	background: #a77ce6;
+	box-shadow: inset -6px -6px 0 #7047ae, 0 0 14px rgba(167, 124, 230, 0.4);
+}
+
+.final-alien--cyclops .final-alien-body {
+	background: #a77ce6;
+	box-shadow: inset -5px -5px 0 #7047ae;
+}
+
+.final-alien--cyclops .final-alien-head span:first-child {
+	left: 23px;
+	width: 14px;
+	height: 17px;
+}
+
+.final-alien--cyclops .final-alien-head span:last-child {
+	display: none;
+}
+
 .scene-enter {
 	animation: scene-enter 0.9s ease-out both;
 }
@@ -1659,6 +1789,11 @@ body {
 	to { opacity: 1; transform: rotate(52deg) scale(1.15); }
 }
 
+@keyframes final-alien-hop {
+	from { margin-top: 0; }
+	to { margin-top: -10px; }
+}
+
 @keyframes orbit-spin {
 	from { transform: translate(-50%, -50%) rotate(22deg); }
 	to { transform: translate(-50%, -50%) rotate(382deg); }
@@ -1770,5 +1905,19 @@ body {
 
 	.alien-cake {
 		transform: translate(-50%, -50%) scale(0.68);
+	}
+
+	.final-alien--robot {
+		left: 2%;
+		transform: scale(0.62);
+	}
+
+	.final-alien--baby {
+		transform: translateX(-50%) scale(0.52);
+	}
+
+	.final-alien--cyclops {
+		right: 2%;
+		transform: scale(0.58);
 	}
 }
